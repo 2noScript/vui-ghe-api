@@ -8,13 +8,13 @@ const errorHandler = require("./middlewares/errorHandler");
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(cache());
-app.use("/api/v1", routes);
+app.use("/api", routes);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log("Listening at", PORT);
+	console.log(`Listening at http://localhost:${PORT}`);
 });

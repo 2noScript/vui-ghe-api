@@ -20,5 +20,8 @@
     "express": "^4.17.1",
     "jsdom": "^17.0.0",
     "memory-cache": "^0.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
